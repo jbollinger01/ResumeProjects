@@ -1,3 +1,6 @@
 TODO:
 - complete the gui
 - complete the player creater frame. 
+
+TODO once gui is complete
+- delete the testing methods
