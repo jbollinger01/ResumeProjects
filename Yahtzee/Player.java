@@ -33,6 +33,7 @@ public class Player {
 	private int[] upperSection = {0,0,0,0,0,0};
 	
 	// 3 kind, 4 kind, full, sm st, lg st, yahtzee, chance
+	// TODO what is the benefit of this over a different data structure such as a hash-map
 	private int[] lowerSection = {0,0,0,0,0,0,0};
 	
 	private int yahtzeeCounter = 0;
