@@ -1,5 +1,7 @@
 package yatzee;
 
+// delete this file once the GUI is completed
+
 public class test {
 
 //	public static void main(String[] args) {
