@@ -1,2 +1,2 @@
 # ResumeProjects
-Sample Java Projects
+Sample Projects
