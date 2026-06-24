@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://7xqrndiejql0"]
+
+[ext_resource type="PackedScene" uid="uid://dq4tgnup0bhev" path="res://player_space_ship/player.tscn" id="1_kad4l"]
+[ext_resource type="PackedScene" uid="uid://4rne3k7llh2p" path="res://inventory_grid_system/test_items/test_receiving_system.tscn" id="2_6364p"]
+[ext_resource type="PackedScene" uid="uid://dsvu4bnq7oov3" path="res://inventory_grid_system/inventory_grid_system.tscn" id="2_e1rwe"]
+[ext_resource type="Texture2D" uid="uid://d047d4mygg8kw" path="res://a_config/icon.svg" id="3_e1rwe"]
+[ext_resource type="Resource" uid="uid://c676v78wfqy3o" path="res://inventory_grid_system/test_items/test_item_4.tres" id="3_fh3gw"]
+[ext_resource type="Script" uid="uid://baggoo260ujm6" path="res://inventory_grid_system/test_items/test_sending_system.gd" id="4_c08ns"]
+[ext_resource type="Resource" uid="uid://bguwyhw64xrik" path="res://inventory_grid_system/test_items/test_item_1.tres" id="5_flfr8"]
+[ext_resource type="Script" uid="uid://c04662on41sn5" path="res://inventory_grid_system/test_items/test_receiving_script.gd" id="6_fubc3"]
+[ext_resource type="Texture2D" uid="uid://bevy6s3lfc5i6" path="res://assets/visual/player_images/alien/playerGreen_up3.png" id="6_qt1vg"]
+[ext_resource type="Script" uid="uid://bjvkkd5icgnlr" path="res://inventory_grid_system/test_items/test_equipment_slot_ui.gd" id="7_7j2g3"]
+[ext_resource type="Resource" uid="uid://nctwhha83wph" path="res://inventory_grid_system/test_items/test_item_6_equpiment.tres" id="7_oquq6"]
+[ext_resource type="Texture2D" uid="uid://c2i6gv6ae64m1" path="res://assets/visual/bullet_images/yellowCrystal.png" id="8_flfr8"]
+[ext_resource type="Resource" uid="uid://db83pp6noh421" path="res://inventory_grid_system/test_items/test_item_2.tres" id="9_kad4l"]
+[ext_resource type="PackedScene" uid="uid://brhklvm8e2ile" path="res://inventory_grid_system/test_items/test_world_pickup_item.tscn" id="13_n6rel"]
+
+[node name="ExampleLevelDragAndDrop" type="Node2D" unique_id=121271285]
+
+[node name="Player" parent="." unique_id=2056282501 instance=ExtResource("1_kad4l")]
+visible = false
+position = Vector2(580, 118)
+
+[node name="TestWorldPickupItem" parent="." unique_id=1932096771 instance=ExtResource("13_n6rel")]
+visible = false
+position = Vector2(882, 144)
+pickup_item = ExtResource("3_fh3gw")
+quantity = 6
+
+[node name="InventoryGridSystem" parent="." unique_id=1162879015 instance=ExtResource("2_e1rwe")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 605.0
+offset_top = 325.0
+offset_right = 605.0
+offset_bottom = 325.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="TestRecievingSystem" parent="." unique_id=747742596 node_paths=PackedStringArray("inventory_system") instance=ExtResource("2_6364p")]
+offset_left = 558.0
+offset_top = 490.0
+offset_right = 683.0
+offset_bottom = 615.0
+inventory_system = NodePath("../InventoryGridSystem")
+
+[node name="Button" type="Button" parent="." unique_id=95731298 node_paths=PackedStringArray("inventory_system")]
+offset_left = 424.0
+offset_top = 517.0
+offset_right = 560.0
+offset_bottom = 653.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_e1rwe")
+script = ExtResource("4_c08ns")
+inventory_system = NodePath("../InventoryGridSystem")
+item_to_send = ExtResource("5_flfr8")
+quantity_to_send = 2
+
+[node name="Button2" type="Button" parent="." unique_id=1126329693 node_paths=PackedStringArray("inventory_system")]
+offset_left = 344.0
+offset_top = 518.0
+offset_right = 480.0
+offset_bottom = 654.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("6_qt1vg")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_c08ns")
+inventory_system = NodePath("../InventoryGridSystem")
+item_to_send = ExtResource("7_oquq6")
+
+[node name="Button3" type="Button" parent="." unique_id=815839574 node_paths=PackedStringArray("inventory_system")]
+offset_left = 249.0
+offset_top = 517.0
+offset_right = 385.0
+offset_bottom = 653.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("8_flfr8")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_c08ns")
+inventory_system = NodePath("../InventoryGridSystem")
+item_to_send = ExtResource("9_kad4l")
+quantity_to_send = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=136209865]
+offset_left = 97.99994
+offset_top = 84.0
+offset_right = 137.99994
+offset_bottom = 124.0
+scale = Vector2(2.5121083, 2.5121083)
+script = ExtResource("6_fubc3")
+
+[node name="PanelContainer4" type="PanelContainer" parent="." unique_id=311443297]
+offset_left = 322.00003
+offset_top = 77.99999
+offset_right = 362.00003
+offset_bottom = 117.99999
+scale = Vector2(2.5121083, 2.5121083)
+script = ExtResource("6_fubc3")
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=994725121]
+offset_left = 97.99999
+offset_top = 219.00002
+offset_right = 138.0
+offset_bottom = 259.0
+scale = Vector2(2.5121083, 2.5121083)
+script = ExtResource("6_fubc3")
+accepts_transfers = false
+
+[node name="PanelContainer3" type="PanelContainer" parent="." unique_id=42622492]
+offset_left = 1099.0001
+offset_top = 295.99997
+offset_right = 1139.0001
+offset_bottom = 335.99997
+scale = Vector2(2.5121083, 2.5121083)
+script = ExtResource("6_fubc3")
+only_accept_equipment = true
+
+[node name="PanelContainer5" type="PanelContainer" parent="." unique_id=1707959428]
+offset_left = 1135.0
+offset_top = 37.0
+offset_right = 1175.0
+offset_bottom = 77.0
+script = ExtResource("7_7j2g3")

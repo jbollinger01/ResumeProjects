@@ -1,0 +1,229 @@
+[gd_scene format=3 uid="uid://dsvu4bnq7oov3"]
+
+[ext_resource type="Script" uid="uid://cbi0q23x35u73" path="res://inventory_grid_system/inventory_grid_system.gd" id="1_ew42g"]
+[ext_resource type="Resource" uid="uid://bguwyhw64xrik" path="res://inventory_grid_system/test_items/test_item_1.tres" id="2_e4lkw"]
+[ext_resource type="Script" uid="uid://dq1bxldi2etkw" path="res://inventory_grid_system/drag_drop_grid.gd" id="2_ydl26"]
+[ext_resource type="Resource" uid="uid://db83pp6noh421" path="res://inventory_grid_system/test_items/test_item_2.tres" id="3_a15kg"]
+[ext_resource type="Script" uid="uid://duq5rgy85ud2y" path="res://inventory_grid_system/drag_and_drop_cell.gd" id="3_kq8ad"]
+[ext_resource type="Resource" uid="uid://b44n82ai4bs0x" path="res://inventory_grid_system/test_items/test_item_3.tres" id="4_6fx5p"]
+[ext_resource type="Resource" uid="uid://c676v78wfqy3o" path="res://inventory_grid_system/test_items/test_item_4.tres" id="5_0cflh"]
+[ext_resource type="Resource" uid="uid://d1nsdw7jhdvos" path="res://inventory_grid_system/test_items/test_item_5.tres" id="6_5j0ls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evxr"]
+bg_color = Color(0.32544088, 0.3254409, 0.32544076, 1)
+
+[node name="InventoryGridSystem" type="Control" unique_id=1162879015]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_ew42g")
+test_item_1 = ExtResource("2_e4lkw")
+test_item_2 = ExtResource("3_a15kg")
+test_item_3 = ExtResource("4_6fx5p")
+test_item_4 = ExtResource("5_0cflh")
+test_item_5 = ExtResource("6_5j0ls")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=726836800]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -311.95227
+offset_top = -75.5
+offset_right = 311.95227
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8evxr")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer" unique_id=1935236683]
+layout_mode = 2
+columns = 8
+script = ExtResource("2_ydl26")
+rows = 2
+metadata/_custom_type_script = "uid://dq1bxldi2etkw"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button00" type="Button" parent="PanelContainer/GridContainer" unique_id=1518167536]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button01" type="Button" parent="PanelContainer/GridContainer" unique_id=542167596]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button02" type="Button" parent="PanelContainer/GridContainer" unique_id=2037706851]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button03" type="Button" parent="PanelContainer/GridContainer" unique_id=820459928]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button04" type="Button" parent="PanelContainer/GridContainer" unique_id=100702167]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button05" type="Button" parent="PanelContainer/GridContainer" unique_id=653984990]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button06" type="Button" parent="PanelContainer/GridContainer" unique_id=2144133856]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button07" type="Button" parent="PanelContainer/GridContainer" unique_id=1042346542]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button08" type="Button" parent="PanelContainer/GridContainer" unique_id=1894904617]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button09" type="Button" parent="PanelContainer/GridContainer" unique_id=867465273]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button10" type="Button" parent="PanelContainer/GridContainer" unique_id=1061440927]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button11" type="Button" parent="PanelContainer/GridContainer" unique_id=1169724215]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button12" type="Button" parent="PanelContainer/GridContainer" unique_id=2117722327]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button13" type="Button" parent="PanelContainer/GridContainer" unique_id=1942765521]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button14" type="Button" parent="PanelContainer/GridContainer" unique_id=1089064307]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
+
+[node name="Button15" type="Button" parent="PanelContainer/GridContainer" unique_id=865916940]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 2
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_kq8ad")
+metadata/_custom_type_script = "uid://duq5rgy85ud2y"
